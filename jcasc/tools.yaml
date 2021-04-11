@@ -1,0 +1,14 @@
+tool:
+  git:
+    installations:
+      - home: "git"
+        name: "Default"
+  jdk:
+    defaultProperties:
+      - installSource:
+          installers:
+            - jdkInstaller:
+                acceptLicense: false
+    installations:
+      - home: "/usr/java/default/"
+        name: "JDK8"
