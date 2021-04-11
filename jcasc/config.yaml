@@ -6,7 +6,7 @@ jenkins:
       # The Client ID from the Google Developer Console
       clientId: "1083927666750-8gcj9f4djo7h9qrfk1k043kofd7fg1ei.apps.googleusercontent.com"
       # The Client Secret from the Google Developer Console.
-      clientSecret: google-auth-secret
+      clientSecret: ${google-auth-secret}
       # Optional. If present, access to Jenkins will be restricted to users in the provided Google Apps Domain.
       #           A comma separated list can be used to specify multiple domains.
       domain: "liber-tea.it"
