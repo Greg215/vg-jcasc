@@ -1,8 +1,0 @@
-jenkins:
-  systemMessage: "Configuring of google login plugin in Jenkins"
-
-  securityRealm:
-    googleOAuth2:
-      clientId: "1083927666750-8gcj9f4djo7h9qrfk1k043kofd7fg1ei.apps.googleusercontent.com"
-      clientSecret: google-auth-secret
-      domain: "liber-tea.it"
