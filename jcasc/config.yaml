@@ -1,6 +1,4 @@
 jenkins:
-  systemMessage: "Configuring of google login plugin in Jenkins"
-
   securityRealm:
     googleOAuth2:
       # The Client ID from the Google Developer Console
