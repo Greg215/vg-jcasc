@@ -1,27 +1,7 @@
 jenkins:
   systemMessage: "Welcome to VisionGroup CI\CD server, this Jenkins is for DataSense project."
-  mode: EXCLUSIVE
-  NumExecutors: 2
   securityRealm:
     googleOAuth2:
       clientId: "1083927666750-8gcj9f4djo7h9qrfk1k043kofd7fg1ei.apps.googleusercontent.com"
       clientSecret: ${google-auth-secret}
       domain: "liber-tea.it"
-  globalNodeProperties:
-    - envVars:
-        env:
-          - key: "PATH+EXTRA"
-            value: "/var/lib/jenkins/bin:/usr/local/bin"
-unclassified:
-  location:
-    adminAddress: "greg.hu@visiongroup.co"
-  timestamper:
-    allPipelines: true
-  buildDiscarders:
-    configuredBuildDiscarders:
-      - "jobBuildDiscarder"
-      - simpleBuildDiscarder:
-          discarder:
-            logRotator:
-              daysToKeepStr: "30"
-              numToKeepStr: "20"
