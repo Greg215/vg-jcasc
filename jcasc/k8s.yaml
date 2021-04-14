@@ -1,0 +1,68 @@
+jenkins:
+  clouds:
+    - kubernetes:
+        jenkinsUrl: "http://jenkins-ci:443"
+        jenkinsTunnel: "jenkins-ci-agent:31000"
+        name: "kubernetes"
+        templates:
+          - containers:
+              - args: ""
+                command: ""
+                image: "greghu/jenkins-agent:latest"
+                name: "jnlp"
+                alwaysPullImage: false
+                envVars:
+                  - envVar:
+                      key: "JENKINS_URL"
+                      value: "http://jenkins-ci:443"
+                  - envVar:
+                      key: "DOCKER_HOST"
+                      value: "tcp://localhost:2375"
+                livenessProbe:
+                  failureThreshold: 0
+                  initialDelaySeconds: 0
+                  periodSeconds: 0
+                  successThreshold: 0
+                  timeoutSeconds: 0
+                resourceLimitMemory: "1Gi"
+                resourceRequestCpu: "1Gi"
+                resourceRequestMemory: "2Gi"
+                runAsGroup: "0"
+                runAsUser: "0"
+                ttyEnabled: true
+                workingDir: "/home/jenkins"
+            idleMinutes: 1
+            idleMinutesStr: "1"
+            hostNetwork: false
+            label: "docker"
+            name: "jenkins-agent-docker"
+            nodeSelector:
+              beta.kubernetes.io/instance-type: "t3.medium"
+            nodeUsageMode: "NORMAL"
+            runAsGroup: "1000"
+            runAsUser: "1000"
+            yaml: |
+              # Raw yaml for the pod
+              apiVersion: v1
+              kind: Pod
+              spec:
+                containers:
+                  - name: jenkins-agent
+                    resources:
+                      requests:
+                        ephemeral-storage: "500Mi"
+                      limits:
+                        ephemeral-storage: "1Gi"
+                  - name: jnlp
+                    resources:
+                      requests:
+                        ephemeral-storage: "500Mi"
+                      limits:
+                        ephemeral-storage: "1Gi"
+                    image: greghu/jenkins-agent:latest
+                    env:
+                      - name: POD_IP
+                        valueFrom:
+                          fieldRef:
+                            fieldPath: status.podIP
+            yamlMergeStrategy: "override"
