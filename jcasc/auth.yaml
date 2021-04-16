@@ -1,0 +1,24 @@
+jenkins:
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "admin"
+            description: "Jenkins administrators"
+            permissions:
+              - "Overall/Administer"
+            assignments:
+              - "info@liber-tea.it"
+          - name: "developer"
+            description: "Developers"
+            permissions:
+              - "Overall/Read"
+              - "Job/Read"
+              - "Job/Build"
+              - "Job/Cancel"
+              - "Job/ExtendedRead"
+              - "Run/Replay"
+              - "Run/Update"
+              - "View/Read"
+            assignments:
+              - "authenticated"
