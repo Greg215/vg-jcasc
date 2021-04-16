@@ -1,0 +1,67 @@
+jenkins:
+  primaryView:
+    list:
+      jobFilters:
+        - jobStatusFilter:
+            aborted: false
+            disabled: false
+            failed: false
+            includeExcludeTypeString: "includeMatched"
+            stable: true
+            unstable: false
+        - buildTrendFilter:
+            amount: 18
+            amountTypeString: "Hours"
+            buildCountTypeString: "Latest"
+            includeExcludeTypeString: "excludeUnmatched"
+            statusTypeString: "Started"
+        - jobStatusFilter:
+            aborted: true
+            disabled: false
+            failed: true
+            includeExcludeTypeString: "includeMatched"
+            stable: false
+            unstable: true
+        - jobStatusFilter:
+            aborted: false
+            disabled: true
+            failed: false
+            includeExcludeTypeString: "excludeMatched"
+            stable: false
+            unstable: false
+      name: "Recent Jobs"
+      recurse: true
+  views:
+    - list:
+        jobFilters:
+          - jobStatusFilter:
+              aborted: false
+              disabled: false
+              failed: false
+              includeExcludeTypeString: "includeMatched"
+              stable: true
+              unstable: false
+          - buildTrendFilter:
+              amount: 18
+              amountTypeString: "Hours"
+              buildCountTypeString: "Latest"
+              includeExcludeTypeString: "excludeUnmatched"
+              statusTypeString: "Started"
+          - jobStatusFilter:
+              aborted: true
+              disabled: false
+              failed: true
+              includeExcludeTypeString: "includeMatched"
+              stable: false
+              unstable: true
+          - jobStatusFilter:
+              aborted: false
+              disabled: true
+              failed: false
+              includeExcludeTypeString: "excludeMatched"
+              stable: false
+              unstable: false
+        name: "Recent Jobs"
+        recurse: true
+    - all:
+        name: "all"
