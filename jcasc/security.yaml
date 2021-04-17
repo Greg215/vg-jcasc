@@ -1,3 +1,0 @@
-security:
-  globaljobdslsecurityconfiguration:
-    useScriptSecurity: false
