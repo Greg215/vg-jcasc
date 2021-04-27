@@ -2,4 +2,6 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-light-blue.css"
+          url: "https://cdn.rawgit.com/djonsson/jenkins-atlassian-theme/gh-pages/theme-min.css"
+      - jsUrl:
+          url: "https://cdn.rawgit.com/djonsson/jenkins-atlassian-theme/gh-pages/theme.js"
