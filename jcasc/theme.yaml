@@ -2,6 +2,6 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: "https://cdn.rawgit.com/djonsson/jenkins-atlassian-theme/gh-pages/theme-min.css"
+          url: "https://cdnjs.cloudflare.com/ajax/libs/doony/2.1/css/doony.min.css"
       - jsUrl:
-          url: "https://cdn.rawgit.com/djonsson/jenkins-atlassian-theme/gh-pages/theme.js"
+          url: "https://cdnjs.cloudflare.com/ajax/libs/doony/2.1/js/doony.min.js"
