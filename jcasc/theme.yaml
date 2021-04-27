@@ -2,6 +2,6 @@ unclassified:
   simple-theme-plugin:
     elements:
       - cssUrl:
-          url: "https://tobix.github.io/jenkins-neo2-theme/dist/neo-light.css"
+          url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-blue.css"
 #      - jsUrl:
 #          url: "https://cdnjs.cloudflare.com/ajax/libs/doony/2.1/js/doony.min.js"
